@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2020 11:29:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="beans.User" table="user" schema="dbo" catalog="softlogic_product_db" optimistic-lock="version">
+        <id name="idUser" type="int">
+            <column name="idUser" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstName" length="50" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="50" not-null="true" />
+        </property>
+        <property name="salt" type="string">
+            <column name="salt" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+        <property name="dateCreated" type="string">
+            <column name="dateCreated" length="50" not-null="true" />
+        </property>
+        <property name="lastUpdated" type="string">
+            <column name="lastUpdated" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

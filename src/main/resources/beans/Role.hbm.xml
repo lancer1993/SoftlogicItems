@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2020 11:29:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="beans.Role" table="role" schema="dbo" catalog="softlogic_product_db" optimistic-lock="version">
+        <id name="idRole" type="int">
+            <column name="idRole" />
+            <generator class="assigned" />
+        </id>
+        <property name="roleName" type="string">
+            <column name="roleName" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

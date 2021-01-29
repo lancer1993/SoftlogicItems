@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2020 11:29:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="beans.UserRole" table="user_role" schema="dbo" catalog="softlogic_product_db" optimistic-lock="version">
+        <id name="idUserRole" type="int">
+            <column name="idUserRole" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="role" class="beans.Role" fetch="select">
+            <column name="idRole" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="beans.User" fetch="select">
+            <column name="idUser" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
